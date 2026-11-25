@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Sanjana &amp; Shubham | The Royal Wedding Invitation</title>
+  <meta name="description" content="With the blessings of our families, you are cordially invited to the royal wedding celebration of Sanjana & Shubham on Thursday, 3 December 2026 at Sushiladevi Lawns, Jalna." />
+  <meta name="theme-color" content="#6E1414" />
+
+  <meta property="og:title" content="Sanjana & Shubham — Royal Wedding Invitation (3 Dec 2026)" />
+  <meta property="og:description" content="Join the Chavan & Maheshwar families in Jalna for the wedding of Sanjana & Shubham." />
+  <meta property="og:image" content="./couple%20two.jpeg" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="is-locked">
+
+  <!-- Ambient Floating Rose Petals Canvas -->
+  <canvas id="petal-canvas" aria-hidden="true"></canvas>
+
+  <!-- Subtle Scroll Progress Bar -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+  </div>
+
+  <!-- =========================================================================
+       TOP MAROON HEADER RIBBON
+       ========================================================================= -->
+  <header class="royal-topbar" id="royal-topbar">
+    <div class="topbar-inner">
+      <a href="#hero" class="topbar-brand">S &amp; S &nbsp;•&nbsp; 03 DEC 2026</a>
+      <nav class="topbar-nav" aria-label="Primary Navigation">
+        <a href="#invitation">Invitation</a>
+        <a href="#save-the-date">Save the Date</a>
+        <a href="#gallery">Royal Gallery</a>
+        <a href="#events">Events</a>
+        <a href="#venue">The Venue</a>
+        <a href="#rsvp">RSVP</a>
+      </nav>
+      <button id="audio-toggle" class="audio-btn" type="button" aria-label="Toggle Background Music" aria-pressed="false">
+        <span class="audio-label">Music</span>
+        <span class="audio-dot" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       SCENE 0: PEACOCK GATEWAY ENTRANCE (3D SWINGING DOORS + ZOOM-THROUGH)
+       ========================================================================= -->
+  <section id="gateway-overlay" class="gateway-overlay" aria-label="Royal Peacock Gateway Entrance">
+    <div class="gateway-stage" id="gateway-stage">
+      <!-- Jaipur Mor Chowk Inspired Mosaic & Peacock Archway SVG -->
+      <svg class="gateway-arch-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="wallCream" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#E7CFA3"/>
+            <stop offset="100%" stop-color="#C9A46B"/>
+          </linearGradient>
+          <linearGradient id="archGold" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#F6DC88"/>
+            <stop offset="50%" stop-color="#C8922A"/>
+            <stop offset="100%" stop-color="#8A5D12"/>
+          </linearGradient>
+          <linearGradient id="peacockBlue" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#1E6FD9"/>
+            <stop offset="60%" stop-color="#0C4A6E"/>
+            <stop offset="100%" stop-color="#065F46"/>
+          </linearGradient>
+          <linearGradient id="peacockGreen" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#10B981"/>
+            <stop offset="55%" stop-color="#047857"/>
+            <stop offset="100%" stop-color="#064E3B"/>
+          </linearGradient>
+          <pattern id="tilePattern" width="60" height="60" patternUnits="userSpaceOnUse">
+            <rect width="60" height="60" fill="#DFC79C"/>
+            <rect x="3" y="3" width="54" height="54" fill="none" stroke="#8B1E1E" stroke-width="1.5"/>
+            <circle cx="30" cy="30" r="16" fill="#0F766E" opacity="0.85"/>
+            <circle cx="30" cy="30" r="9" fill="#D4A037"/>
+            <circle cx="30" cy="30" r="4" fill="#8B1E1E"/>
+            <path d="M30 4 L35 14 L30 18 L25 14 Z M30 56 L35 46 L30 42 L25 46 Z M4 30 L14 25 L18 30 L14 35 Z M56 30 L46 25 L42 30 L46 35 Z" fill="#1D4ED8" opacity="0.75"/>
+          </pattern>
+        </defs>
+
+        <!-- Sandstone & Mosaic Courtyard Background -->
+        <rect width="1440" height="900" fill="url(#wallCream)"/>
+        <!-- Side Mosaic Panels -->
+        <rect x="40" y="30" width="240" height="840" fill="url(#tilePattern)" stroke="#7C4D1E" stroke-width="6"/>
+        <rect x="1160" y="30" width="240" height="840" fill="url(#tilePattern)" stroke="#7C4D1E" stroke-width="6"/>
+
+        <!-- Courtyard Pillars -->
+        <rect x="295" y="0" width="52" height="900" fill="#D5B582" stroke="#8C6239" stroke-width="3"/>
+        <rect x="1093" y="0" width="52" height="900" fill="#D5B582" stroke="#8C6239" stroke-width="3"/>
+
+        <!-- Outer Scalloped Gateway Frame -->
+        <path d="M347 900 L347 360 C347 160 520 55 720 55 C920 55 1093 160 1093 360 L1093 900 Z" fill="#4A0E0E" stroke="url(#archGold)" stroke-width="12"/>
+        <!-- Ornamental Arch Inner Mosaic Band -->
+        <path d="M385 900 L385 375 C385 200 540 100 720 100 C900 100 1055 200 1055 375 L1055 900 Z" fill="#1A0A06" stroke="#D4A037" stroke-width="6"/>
+
+        <!-- Top Center Fanned Peacock Crest -->
+        <g transform="translate(720, 185)">
+          <circle cx="0" cy="0" r="88" fill="url(#peacockGreen)" stroke="#F6DC88" stroke-width="3"/>
+          <circle cx="0" cy="0" r="68" fill="none" stroke="#38BDF8" stroke-width="4" stroke-dasharray="6 8"/>
+          <circle cx="0" cy="0" r="46" fill="url(#peacockBlue)" stroke="#F6DC88" stroke-width="2"/>
+          <!-- Peacock Body -->
+          <ellipse cx="0" cy="22" rx="14" ry="26" fill="#1D4ED8" stroke="#F6DC88" stroke-width="1.5"/>
+          <circle cx="0" cy="-8" r="9" fill="#1E40AF"/>
+          <path d="M-2 -18 L0 -26 L2 -18" stroke="#F6DC88" stroke-width="2" fill="none"/>
+        </g>
+
+        <!-- Left Sculpted Peacock -->
+        <g transform="translate(465, 315) rotate(-14)">
+          <path d="M-55 85 C-70 20 -25 -45 10 -65 C15 -10 -5 45 -18 90 Z" fill="url(#peacockGreen)" stroke="#F6DC88" stroke-width="2"/>
+          <ellipse cx="8" cy="18" rx="16" ry="30" fill="url(#peacockBlue)" stroke="#F6DC88" stroke-width="1.5"/>
+          <circle cx="16" cy="-18" r="10" fill="#1E40AF"/>
+        </g>
+        <!-- Right Sculpted Peacock -->
+        <g transform="translate(975, 315) rotate(14) scale(-1, 1)">
+          <path d="M-55 85 C-70 20 -25 -45 10 -65 C15 -10 -5 45 -18 90 Z" fill="url(#peacockGreen)" stroke="#F6DC88" stroke-width="2"/>
+          <ellipse cx="8" cy="18" rx="16" ry="30" fill="url(#peacockBlue)" stroke="#F6DC88" stroke-width="1.5"/>
+          <circle cx="16" cy="-18" r="10" fill="#1E40AF"/>
+        </g>
+
+        <!-- Potted Courtyard Palms -->
+        <g transform="translate(325, 760)">
+          <polygon points="-24,0 24,0 18,48 -18,48" fill="#9A4E27"/>
+          <path d="M0 0 C-25 -40 -50 -35 -60 -15 M0 0 C-15 -55 -20 -75 -5 -90 M0 0 C20 -55 45 -50 55 -25 M0 0 C15 -40 35 -25 45 -5" stroke="#15803D" stroke-width="7" stroke-linecap="round" fill="none"/>
+        </g>
+        <g transform="translate(1115, 760)">
+          <polygon points="-24,0 24,0 18,48 -18,48" fill="#9A4E27"/>
+          <path d="M0 0 C-25 -40 -50 -35 -60 -15 M0 0 C-15 -55 -20 -75 -5 -90 M0 0 C20 -55 45 -50 55 -25 M0 0 C15 -40 35 -25 45 -5" stroke="#15803D" stroke-width="7" stroke-linecap="round" fill="none"/>
+        </g>
+      </svg>
+
+      <!-- Warm Sunlit Glow Revealed Behind Doors -->
+      <div class="gateway-golden-glow" aria-hidden="true"></div>
+
+      <!-- 3D Carved Wooden Double Doors Centered Inside the Arch -->
+      <div class="wooden-doorway">
+        <div class="wooden-door wooden-door--left" aria-hidden="true">
+          <div class="door-carving"></div>
+          <div class="door-knocker"></div>
+        </div>
+        <div class="wooden-door wooden-door--right" aria-hidden="true">
+          <div class="door-carving"></div>
+          <div class="door-knocker"></div>
+        </div>
+
+        <!-- Center Trigger Crest -->
+        <button id="enter-gate-btn" class="gate-enter-btn" type="button" aria-label="Enter the Royal Wedding Invitation">
+          <span class="gate-script">Shubh Vivah</span>
+          <span class="gate-couple">Sanjana &amp; Shubham</span>
+          <span class="gate-cta-pill">Tap to Open Royal Gate</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       GOLDEN TRANSITION MIST
+       ========================================================================= -->
+  <div id="golden-mist" class="golden-mist" aria-hidden="true"></div>
+
+  <main id="main-content">
+
+    <!-- =========================================================================
+         SCENE 1: SUNSET PALACE HERO
+         ========================================================================= -->
+    <section id="hero" class="hero-palace" data-scene>
+      <div class="hero-sky" aria-hidden="true">
+        <div class="sun-halo"></div>
+        <div class="cloud cloud--1"></div>
+        <div class="cloud cloud--2"></div>
+      </div>
+
+      <div class="hero-titles">
+        <p class="hero-script">Shubh Vivah</p>
+        <h1 class="hero-couple">
+          <span>SANJANA</span>
+          <span class="hero-amp">&amp;</span>
+          <span>SHUBHAM</span>
+        </h1>
+        <p class="hero-subtitle">Request the honour of your presence at their royal union</p>
+      </div>
+
+      <!-- Panoramic Rajasthani Sandstone Palace SVG -->
+      <div class="palace-silhouette-wrap" id="palace-parallax" aria-hidden="true">
+        <svg class="palace-svg" viewBox="0 0 1440 460" preserveAspectRatio="xMidYMax slice">
+          <defs>
+            <linearGradient id="sandstone" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#E79E5C"/>
+              <stop offset="45%" stop-color="#B9643B"/>
+              <stop offset="100%" stop-color="#5E2318"/>
+            </linearGradient>
+            <linearGradient id="domeGold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#FCE49C"/>
+              <stop offset="100%" stop-color="#B87A24"/>
+            </linearGradient>
+            <radialGradient id="archGlow" cx="50%" cy="60%" r="60%">
+              <stop offset="0%" stop-color="#FFF2C2"/>
+              <stop offset="100%" stop-color="#D97724" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <!-- Distant Flanking Wings -->
+          <rect x="0" y="255" width="1440" height="205" fill="#7D3524"/>
+          <rect x="110" y="195" width="1220" height="265" fill="url(#sandstone)"/>
+
+          <!-- Left & Right Chhatri Domes -->
+          <g fill="url(#sandstone)" stroke="#F6C87A" stroke-width="1.5">
+            <!-- Left Outer Chhatri -->
+            <path d="M165 195 Q210 115 255 195 Z"/>
+            <line x1="210" y1="120" x2="210" y2="102" stroke="#FCE49C" stroke-width="3"/>
+            <!-- Left Inner Chhatri -->
+            <path d="M350 175 Q410 75 470 175 Z"/>
+            <line x1="410" y1="85" x2="410" y2="62" stroke="#FCE49C" stroke-width="3"/>
+            <!-- Grand Center Dome -->
+            <path d="M590 165 Q720 15 850 165 Z" fill="url(#domeGold)"/>
+            <line x1="720" y1="30" x2="720" y2="2" stroke="#FCE49C" stroke-width="4"/>
+            <!-- Right Inner Chhatri -->
+            <path d="M970 175 Q1030 75 1090 175 Z"/>
+            <line x1="1030" y1="85" x2="1030" y2="62" stroke="#FCE49C" stroke-width="3"/>
+            <!-- Right Outer Chhatri -->
+            <path d="M1185 195 Q1230 115 1275 195 Z"/>
+            <line x1="1230" y1="120" x2="1230" y2="102" stroke="#FCE49C" stroke-width="3"/>
+          </g>
+
+          <!-- Upper Jharokha Windows -->
+          <g fill="#FFE8A3" opacity="0.88">
+            <path d="M290 285 L290 238 Q315 215 340 238 L340 285 Z"/>
+            <path d="M405 285 L405 235 Q430 210 455 235 L455 285 Z"/>
+            <path d="M520 285 L520 238 Q545 215 570 238 L570 285 Z"/>
+            <path d="M870 285 L870 238 Q895 215 920 238 L920 285 Z"/>
+            <path d="M985 285 L985 235 Q1010 210 1035 235 L1035 285 Z"/>
+            <path d="M1100 285 L1100 238 Q1125 215 1150 238 L1150 285 Z"/>
+          </g>
+
+          <!-- Grand Central Courtyard Archway -->
+          <path d="M625 460 L625 260 Q720 170 815 260 L815 460 Z" fill="#F3E9D8" stroke="#FCE49C" stroke-width="4"/>
+          <ellipse cx="720" cy="340" rx="140" ry="120" fill="url(#archGlow)"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         WARM PARCHMENT CANVAS WITH EDGE-ANCHORED ROTATING MANDALAS
+         ========================================================================= -->
+    <div class="parchment-body">
+      <!-- Symmetrical Left & Right Decorative Cobalt-Gold Mandalas -->
+      <div class="edge-mandala edge-mandala--left" aria-hidden="true"></div>
+      <div class="edge-mandala edge-mandala--right" aria-hidden="true"></div>
+
+      <!-- =====================================================================
+           SCENE 2: SCALLOPED DATE BANNER & FAMILY INVITATION
+           ===================================================================== -->
+      <section id="invitation" class="p-section" data-scene>
+        <div class="date-banner reveal-3d">
+          <div class="date-banner-scallops" aria-hidden="true"></div>
+          <p class="date-banner-eyebrow">WITH THE BLESSINGS OF LORD GANESHA</p>
+          <h2 class="date-banner-main">THURSDAY, 3 DECEMBER 2026</h2>
+          <p class="date-banner-sub">AUSPICIOUS MUHURTA AT 12:05 PM &nbsp;•&nbsp; JALNA, MAHARASHTRA</p>
+        </div>
+
+        <div class="lineage-card reveal-3d">
+          <p class="lineage-preface">Together with their loving families</p>
+          <div class="lineage-grid">
+            <div class="lineage-col">
+              <span class="lineage-role">The Bride</span>
+              <h3>Sanjana</h3>
+              <p>Eldest Daughter of<br/><strong>Shri Suresh Jagannath Chavan</strong> &amp; <strong>Sou. Surekha Suresh Chavan</strong><br/>Atpadi, Dist. Sangli</p>
+            </div>
+            <div class="lineage-amp" aria-hidden="true">&amp;</div>
+            <div class="lineage-col">
+              <span class="lineage-role">The Groom</span>
+              <h3>Shubham</h3>
+              <p>Eldest Son of<br/><strong>Shri Sanjay Mallaya Maheshwar</strong><br/>Jalna, Maharashtra</p>
+            </div>
+          </div>
+          <p class="lineage-hosts">Cordially invited by the <strong>Chavan &amp; Maheshwar Families</strong></p>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           SCENE 3: JHAROKHA ARCHED COUNTDOWN & SCRATCH-OFF SAVE THE DATE
+           ===================================================================== -->
+      <section id="save-the-date" class="p-section" data-scene>
+        <h2 class="royal-heading reveal-3d">COUNTING DOWN TO FOREVER</h2>
+
+        <!-- 4 Arched Jharokha Countdown Frames -->
+        <div class="jharokha-countdown reveal-3d" aria-label="Wedding Countdown">
+          <div class="j-frame j-frame--gold">
+            <div class="j-finial"></div>
+            <div class="j-arch">
+              <span class="j-num" id="cd-days">00</span>
+              <span class="j-unit">DAYS</span>
+            </div>
+          </div>
+          <div class="j-frame j-frame--cobalt">
+            <div class="j-finial"></div>
+            <div class="j-arch">
+              <span class="j-num" id="cd-hours">00</span>
+              <span class="j-unit">HOURS</span>
+            </div>
+          </div>
+          <div class="j-frame j-frame--crimson">
+            <div class="j-finial"></div>
+            <div class="j-arch">
+              <span class="j-num" id="cd-mins">00</span>
+              <span class="j-unit">MINUTES</span>
+            </div>
+          </div>
+          <div class="j-frame j-frame--emerald">
+            <div class="j-finial"></div>
+            <div class="j-arch">
+              <span class="j-num" id="cd-secs">00</span>
+              <span class="j-unit">SECONDS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- White Rounded SAVE THE DATE Interactive Scratch Card -->
+        <div class="scratch-card-wrap reveal-3d">
+          <div class="scratch-card">
+            <p class="scratch-title">SAVE THE DATE</p>
+            <p class="scratch-hint">Scratch the golden seal below to reveal the wedding date</p>
+
+            <div class="scratch-surface" id="scratch-surface">
+              <div class="scratch-reveal-content">
+                <span class="reveal-badge">SHUBH MUHURTA</span>
+                <strong>03 DECEMBER 2026</strong>
+                <span>Thursday • 12:05 PM • Sushiladevi Lawns, Jalna</span>
+              </div>
+              <canvas id="scratch-canvas" width="380" height="190" aria-label="Scratch to reveal Save the Date"></canvas>
+            </div>
+
+            <div class="scratch-actions">
+              <button type="button" id="scratch-reveal-btn" class="text-link">Reveal Instantly</button>
+              <button type="button" id="scratch-reset-btn" class="text-link">Reset Foil</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           SCENE 4: ROYAL GALLERY (3 HANGING BRASS JHAROKHA PORTRAIT FRAMES)
+           ===================================================================== -->
+      <section id="gallery" class="p-section" data-scene>
+        <h2 class="royal-heading reveal-3d">ROYAL GALLERY</h2>
+        <p class="royal-sub reveal-3d">Cherished portraits of Sanjana &amp; Shubham — tap any frame to inspect</p>
+
+        <div class="hanging-gallery reveal-3d">
+          <figure class="hanging-frame hanging-frame--left" data-tilt data-lightbox="./couple%20one.jpeg" data-caption="Grace & Poise — Sanjana & Shubham">
+            <div class="frame-cord"></div>
+            <div class="frame-finial"></div>
+            <div class="brass-jharokha">
+              <img src="./couple%20one.jpeg" alt="Sanjana and Shubham posing in crimson gown and black suit" />
+            </div>
+          </figure>
+
+          <figure class="hanging-frame hanging-frame--center" data-tilt data-lightbox="./couple%20two.jpeg" data-caption="Unspoken Promise — Sanjana & Shubham">
+            <div class="frame-cord"></div>
+            <div class="frame-finial"></div>
+            <div class="brass-jharokha">
+              <img src="./couple%20two.jpeg" alt="Sanjana and Shubham gazing warmly at each other" />
+            </div>
+          </figure>
+
+          <figure class="hanging-frame hanging-frame--right" data-tilt data-lightbox="./couple%203.jpeg" data-caption="Endless Warmth — Sanjana & Shubham">
+            <div class="frame-cord"></div>
+            <div class="frame-finial"></div>
+            <div class="brass-jharokha">
+              <img src="./couple%203.jpeg" alt="Sanjana leaning gently on Shubham's shoulder" />
+            </div>
+          </figure>
+        </div>
+
+        <!-- Maroon Section Divider Ribbon -->
+        <div class="maroon-divider-banner reveal-3d">
+          <span>ROYAL CINEMA &amp; INVITATION REELS</span>
+        </div>
+
+        <!-- Cinema Reels + Original Card Showcase -->
+        <div class="reels-showcase reveal-3d">
+          <article class="reel-card" data-tilt>
+            <div class="reel-arch">
+              <video id="invitation-video" src="./video.mp4" playsinline loop muted preload="metadata" poster="./image%201.jpeg"></video>
+              <button type="button" class="reel-play-btn" data-video-target="invitation-video" aria-label="Play invitation card reveal video">&#9654;</button>
+            </div>
+            <h3>The Sacred Card Unveil</h3>
+            <p>Rose petals, glowing diya flame, and peacock feather blessing the wedding cards.</p>
+          </article>
+
+          <article class="reel-card" data-tilt>
+            <div class="reel-arch">
+              <video id="couple-video" src="./video%202.mp4" playsinline loop muted preload="metadata" poster="./couple%20one.jpeg"></video>
+              <button type="button" class="reel-play-btn" data-video-target="couple-video" aria-label="Play candid couple video">&#9654;</button>
+            </div>
+            <h3>Moments Together</h3>
+            <p>Candid smiles and warm conversations leading up to our big day.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           SCENE 5: CEREMONIES STRIP & THE VENUE MAROON CARD
+           ===================================================================== -->
+      <section id="events" class="p-section" data-scene>
+        <h2 class="royal-heading reveal-3d">WEDDING CELEBRATIONS</h2>
+
+        <div class="events-strip reveal-3d">
+          <article class="mini-arch-card" data-tilt>
+            <span class="mini-day">DAY 01 • HALDI</span>
+            <h3>Haldi Ceremony</h3>
+            <p class="mini-date">Wednesday, 2 December 2026</p>
+            <p class="mini-time">5:00 PM Onwards</p>
+            <p class="mini-place">At the Wedding Venue — Sushiladevi Lawns, Jalna</p>
+            <button type="button" class="btn-maroon-outline btn-ics" data-event="haldi">+ Add Haldi to Calendar</button>
+          </article>
+
+          <article class="mini-arch-card mini-arch-card--featured" data-tilt>
+            <span class="mini-day">DAY 02 • SHUBH MUHURTA</span>
+            <h3>The Wedding Ceremony</h3>
+            <p class="mini-date">Thursday, 3 December 2026</p>
+            <p class="mini-time">12:05 PM (Auspicious Muhurta)</p>
+            <p class="mini-place">Sushiladevi Lawns, Opp. Govt. Medical College, Bypass Road, Jalna</p>
+            <button type="button" class="btn-maroon btn-ics" data-event="vivah">+ Add Wedding to Calendar</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="venue" class="p-section" data-scene>
+        <h2 class="royal-heading reveal-3d">THE VENUE</h2>
+
+        <div class="venue-maroon-card reveal-3d" data-tilt>
+          <span class="venue-time-badge">12:05 PM • 03 DEC 2026</span>
+          <h3 class="venue-title">Sushiladevi Lawns</h3>
+          <p class="venue-address">Opposite Government Medical College, Bypass Road, Jalna, Maharashtra</p>
+          <div class="venue-cta-row">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Sushiladevi+Lawns+Government+Medical+College+Bypass+Road+Jalna"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-gold-pill"
+            >
+              GET DIRECTIONS
+            </a>
+            <button type="button" id="copy-address-btn" class="btn-cream-outline">COPY ADDRESS</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           SCENE 6: ELEVATED WHITE/CREAM RSVP CARD
+           ===================================================================== -->
+      <section id="rsvp" class="p-section" data-scene>
+        <h2 class="royal-heading reveal-3d">RSVP &amp; BLESSINGS</h2>
+        <p class="royal-sub reveal-3d">Kindly confirm your presence so our families may welcome you warmly</p>
+
+        <div class="rsvp-card-shell reveal-3d">
+          <form id="rsvp-form" class="royal-rsvp-form" novalidate>
+            <div class="form-field">
+              <label for="guest-name">Full Name</label>
+              <input id="guest-name" type="text" required placeholder="e.g. Rajendra & Sneha Patil" />
+            </div>
+
+            <div class="form-two-col">
+              <div class="form-field">
+                <label for="guest-count">Number of Guests</label>
+                <select id="guest-count">
+                  <option value="1 Guest">1 Guest</option>
+                  <option value="2 Guests" selected>2 Guests</option>
+                  <option value="3 Guests">3 Guests</option>
+                  <option value="4 Guests">4 Guests</option>
+                  <option value="Family (5+)">Family (5+)</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="guest-ceremony">Attending</label>
+                <select id="guest-ceremony">
+                  <option value="Both Haldi & Wedding">Both Haldi &amp; Wedding</option>
+                  <option value="Wedding Only (3 Dec)">Wedding Only (3 Dec)</option>
+                  <option value="Sending Warm Blessings">Sending Warm Blessings</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="guest-wish">Blessings for Sanjana &amp; Shubham</label>
+              <textarea id="guest-wish" rows="3" placeholder="Write a warm wish for the couple..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-maroon btn-block">CONFIRM ATTENDANCE</button>
+            <p id="rsvp-status" class="rsvp-status" aria-live="polite"></p>
+          </form>
+
+          <div class="share-strip">
+            <button type="button" id="whatsapp-share-btn" class="btn-maroon-outline">Share Invitation on WhatsApp</button>
+          </div>
+        </div>
+
+        <div class="wishes-grid reveal-3d" id="wishes-wall" aria-label="Guest Blessings"></div>
+      </section>
+
+      <!-- =====================================================================
+           SCENE 7: RAJASTHANI DESERT VILLAGE & CAMEL FOOTER
+           ===================================================================== -->
+      <footer class="desert-footer" aria-label="Wedding Footer">
+        <div class="footer-blessing">
+          <p class="footer-names">Chavan &amp; Maheshwar Families</p>
+          <p class="footer-date">Thursday, 3 December 2026 &nbsp;•&nbsp; Sushiladevi Lawns, Jalna</p>
+        </div>
+
+        <!-- Panoramic Rajasthani Desert Village, Caravan & Ornate Camel SVG -->
+        <svg class="desert-svg" viewBox="0 0 1440 380" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="duneGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#E7B96B"/>
+              <stop offset="100%" stop-color="#C88D44"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Flowering Branches Upper-Left -->
+          <g stroke="#5C3A21" stroke-width="3.5" fill="none">
+            <path d="M-10 35 C75 45 140 85 215 110"/>
+            <path d="M55 58 C95 92 125 125 145 155"/>
+          </g>
+          <g fill="#C23B2B">
+            <circle cx="85" cy="52" r="7"/><circle cx="135" cy="78" r="8"/><circle cx="178" cy="98" r="6"/>
+            <circle cx="115" cy="118" r="7"/><circle cx="145" cy="148" r="6"/><circle cx="212" cy="112" r="7"/>
+          </g>
+          <g fill="#5F7D43">
+            <ellipse cx="105" cy="64" rx="10" ry="4" transform="rotate(-25 105 64)"/>
+            <ellipse cx="162" cy="84" rx="10" ry="4" transform="rotate(20 162 84)"/>
+            <ellipse cx="196" cy="108" rx="9" ry="4" transform="rotate(-15 196 108)"/>
+          </g>
+
+          <!-- Sand Dunes Horizon -->
+          <path d="M0 295 Q360 235 740 275 Q1100 310 1440 250 L1440 380 L0 380 Z" fill="url(#duneGrad)"/>
+          <path d="M0 325 Q480 285 920 330 Q1220 350 1440 310 L1440 380 L0 380 Z" fill="#B57935" opacity="0.55"/>
+
+          <!-- Left Decorated Bhunga Mud Huts -->
+          <g transform="translate(80, 195)">
+            <rect x="0" y="55" width="135" height="90" rx="6" fill="#E8D2AC" stroke="#7A4928" stroke-width="2.5"/>
+            <polygon points="-14,58 68,-6 150,58" fill="#B67A3C" stroke="#6E3F1D" stroke-width="2.5"/>
+            <rect x="52" y="88" width="32" height="57" rx="16" fill="#5A281A"/>
+            <path d="M12 72 L40 72 M95 72 L123 72" stroke="#9B1C1C" stroke-width="3"/>
+          </g>
+          <g transform="translate(230, 220)">
+            <rect x="0" y="45" width="108" height="75" rx="5" fill="#DFC397" stroke="#7A4928" stroke-width="2.5"/>
+            <polygon points="-10,48 54,-4 118,48" fill="#A66A31" stroke="#6E3F1D" stroke-width="2.5"/>
+            <rect x="40" y="74" width="28" height="46" rx="14" fill="#5A281A"/>
+          </g>
+
+          <!-- Distant 3-Camel Caravan & Windmill Silhouette -->
+          <g fill="#5C381F" opacity="0.82">
+            <!-- Caravan -->
+            <path d="M510 264 q6 -14 14 -6 q8 -16 14 2 l2 18 h-4 l-1 -12 h-16 l-2 12 h-4 z"/>
+            <path d="M562 262 q6 -14 14 -6 q8 -16 14 2 l2 18 h-4 l-1 -12 h-16 l-2 12 h-4 z"/>
+            <path d="M614 264 q6 -14 14 -6 q8 -16 14 2 l2 18 h-4 l-1 -12 h-16 l-2 12 h-4 z"/>
+            <!-- Windmill -->
+            <line x1="795" y1="276" x2="795" y2="214" stroke="#5C381F" stroke-width="3"/>
+            <path d="M795 214 L778 196 M795 214 L812 196 M795 214 L778 232 M795 214 L812 232" stroke="#5C381F" stroke-width="2.5"/>
+          </g>
+
+          <!-- Right Ornate Seated Camel in Red & Gold Trappings -->
+          <g transform="translate(1060, 145)">
+            <!-- Camel Neck & Head -->
+            <path d="M125 140 C105 120 95 65 82 40 C72 22 48 20 38 30 C32 36 38 48 54 48 C65 48 72 62 78 96 C82 122 92 145 110 162 Z" fill="#A9642A" stroke="#5E3012" stroke-width="2.5"/>
+            <!-- Camel Seated Body & Hump -->
+            <path d="M105 155 C120 95 190 80 230 118 C258 145 270 175 245 195 L110 198 C90 198 85 175 105 155 Z" fill="#B56E31" stroke="#5E3012" stroke-width="2.5"/>
+            <!-- Ceremonial Crimson & Gold Saddlecloth -->
+            <path d="M132 125 C165 105 212 110 232 138 L225 182 L128 182 Z" fill="#7E1616" stroke="#F0B429" stroke-width="3"/>
+            <path d="M142 145 H218 M140 164 H220" stroke="#F6DC88" stroke-width="2" stroke-dasharray="5 5"/>
+            <!-- Gold Bridle & Tassels -->
+            <path d="M48 34 L72 44 L80 86" stroke="#F0B429" stroke-width="2.5" fill="none"/>
+            <circle cx="78" cy="90" r="5" fill="#DC2626"/>
+          </g>
+        </svg>
+      </footer>
+    </div>
+  </main>
+
+  <!-- Fullscreen Lightbox Modal -->
+  <div id="lightbox" class="lightbox" hidden aria-modal="true" role="dialog" aria-label="Portrait Preview">
+    <button type="button" id="lightbox-close" class="lightbox-close" aria-label="Close Preview">&times;</button>
+    <figure class="lightbox-figure">
+      <img id="lightbox-img" src="" alt="Couple Portrait" />
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
